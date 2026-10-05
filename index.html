@@ -69,18 +69,27 @@
             background: var(--primary);
             color: white;
             border: none;
-            padding: 1rem;
+            padding: 1rem 1.5rem;
             cursor: pointer;
-            font-size: 1.5rem;
-            position: sticky;
+            font-size: 1.1rem;
+            font-weight: 600;
+            position: fixed;
             top: 0;
+            left: 0;
+            right: 0;
             width: 100%;
             text-align: left;
-            z-index: 1001;
+            z-index: 1002;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+            transition: all 0.2s ease;
         }
 
         .menu-toggle:hover {
             background: var(--primary-dark);
+        }
+
+        .menu-toggle:active {
+            opacity: 0.9;
         }
 
         .sidebar-header {
@@ -94,6 +103,31 @@
             font-size: 1.1rem;
             margin: 0;
             font-weight: 700;
+        }
+
+        /* Mobile sidebar overlay backdrop */
+        .mobile-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 998;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .mobile-overlay.active {
+            display: block;
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-overlay {
+                display: block;
+            }
         }
 
         .sidebar-nav {
@@ -533,8 +567,16 @@
         }
 
         @media (max-width: 768px) {
+            body {
+                overflow-x: hidden;
+                padding-top: 60px;
+            }
+
             .main-wrapper {
                 flex-direction: column;
+                position: relative;
+                margin-top: 0;
+                padding-top: 0;
             }
 
             .menu-toggle {
@@ -543,27 +585,44 @@
 
             .sidebar {
                 width: 100%;
+                max-width: 85vw;
                 height: auto;
-                position: absolute;
+                position: fixed;
                 top: 60px;
                 left: 0;
-                border-right: none;
-                border-bottom: 2px solid var(--border);
-                overflow-y: visible;
-                max-height: none;
+                right: auto;
+                bottom: 0;
+                border-right: 2px solid var(--border);
+                border-bottom: none;
+                overflow-y: auto;
                 display: none;
                 flex-direction: column;
                 padding: 0;
+                background: var(--bg-white);
+                z-index: 999;
+                box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
             }
 
             .sidebar.active {
                 display: flex;
+                transform: translateX(0);
+            }
+
+            .content-wrapper {
+                position: relative;
+                z-index: 1;
             }
 
             .sidebar-header {
                 padding: 1rem 1.5rem;
                 border-bottom: 2px solid var(--border);
                 margin: 0;
+                position: sticky;
+                top: 0;
+                background: var(--bg-white);
+                z-index: 10;
             }
 
             .sidebar-nav {
@@ -586,6 +645,12 @@
                 border-bottom: none;
                 border-left: 4px solid transparent;
                 font-size: 1rem;
+                display: flex;
+                align-items: center;
+                gap: 0.75rem;
+                width: 100%;
+                white-space: nowrap;
+                transition: all 0.2s ease;
             }
 
             .sidebar-link:hover,
@@ -832,10 +897,13 @@
         </div>
     </header>
 
-    <div class="main-wrapper">
-        <!-- Mobile Menu Toggle -->
-        <button class="menu-toggle" aria-label="Toggle navigation menu">☰ Menu</button>
+    <!-- Mobile Menu Toggle (Outside main-wrapper to stay at top) -->
+    <button class="menu-toggle" aria-label="Toggle navigation menu">☰ Menu</button>
 
+    <!-- Mobile Overlay Backdrop -->
+    <div class="mobile-overlay"></div>
+
+    <div class="main-wrapper">
         <!-- Sidebar Navigation -->
         <aside class="sidebar">
             <div class="sidebar-header">
@@ -1808,8 +1876,10 @@
 
             // Close sidebar on mobile after selecting a phase
             const sidebar = document.querySelector('.sidebar');
+            const overlay = document.querySelector('.mobile-overlay');
             if (window.innerWidth <= 768 && sidebar) {
                 sidebar.classList.remove('active');
+                if (overlay) overlay.classList.remove('active');
             }
         }
 
@@ -1817,10 +1887,20 @@
         document.addEventListener('DOMContentLoaded', function() {
             const menuToggle = document.querySelector('.menu-toggle');
             const sidebar = document.querySelector('.sidebar');
+            const overlay = document.querySelector('.mobile-overlay');
 
             if (menuToggle) {
                 menuToggle.addEventListener('click', function() {
                     sidebar.classList.toggle('active');
+                    if (overlay) overlay.classList.toggle('active');
+                });
+            }
+
+            // Close sidebar when clicking overlay
+            if (overlay) {
+                overlay.addEventListener('click', function() {
+                    sidebar.classList.remove('active');
+                    overlay.classList.remove('active');
                 });
             }
 
@@ -1832,6 +1912,7 @@
                     const isClickOnMenuToggle = menuToggle.contains(event.target);
                     if (!isClickInsideSidebar && !isClickOnMenuToggle) {
                         sidebar.classList.remove('active');
+                        if (overlay) overlay.classList.remove('active');
                     }
                 }
             });
@@ -1843,8 +1924,10 @@
         // Handle window resize - close sidebar on desktop
         window.addEventListener('resize', function() {
             const sidebar = document.querySelector('.sidebar');
+            const overlay = document.querySelector('.mobile-overlay');
             if (window.innerWidth > 768 && sidebar) {
                 sidebar.classList.remove('active');
+                if (overlay) overlay.classList.remove('active');
             }
         });
     </script>
