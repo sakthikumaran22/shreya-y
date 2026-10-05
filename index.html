@@ -1,0 +1,1451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="M.Sc AI Career Roadmap 2027 - A comprehensive 12-month plan for landing AI internships and full-time roles in Dublin">
+    <title>Shreya Y - M.Sc AI Career Roadmap (Class of 2027)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary: #ec4899;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --bg-light: #f9fafb;
+            --bg-white: #ffffff;
+            --border: #e5e7eb;
+            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --text-dark: #f3f4f6;
+                --text-light: #d1d5db;
+                --bg-light: #1f2937;
+                --bg-white: #111827;
+                --border: #374151;
+            }
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-dark);
+            background: var(--bg-light);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main-wrapper {
+            display: flex;
+            flex: 1;
+        }
+
+        .sidebar {
+            width: 280px;
+            background: var(--bg-white);
+            border-right: 2px solid var(--border);
+            padding: 1.5rem 0;
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            overflow-y: auto;
+            box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .sidebar-header {
+            padding: 1.5rem 1.5rem 2rem;
+            border-bottom: 2px solid var(--border);
+            margin-bottom: 1.5rem;
+        }
+
+        .sidebar-header h3 {
+            color: var(--primary);
+            font-size: 1.1rem;
+            margin: 0;
+            font-weight: 700;
+        }
+
+        .sidebar-nav {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar-nav li {
+            margin: 0;
+        }
+
+        .sidebar-link {
+            display: block;
+            width: 100%;
+            padding: 1rem 1.5rem;
+            color: var(--text-dark);
+            text-decoration: none;
+            cursor: pointer;
+            border-left: 4px solid transparent;
+            border: none;
+            background: none;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            position: relative;
+            text-align: left;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 1rem;
+        }
+
+        .sidebar-link:hover {
+            background: rgba(99, 102, 241, 0.08);
+            color: var(--primary);
+            border-left-color: var(--primary);
+        }
+
+        .sidebar-link.active {
+            background: linear-gradient(90deg, rgba(99, 102, 241, 0.15) 0%, rgba(99, 102, 241, 0.05) 100%);
+            color: var(--primary);
+            border-left-color: var(--primary);
+            font-weight: 700;
+        }
+
+        .sidebar-link::before {
+            content: '◉';
+            margin-right: 0.75rem;
+            opacity: 0.5;
+            transition: opacity 0.3s ease;
+        }
+
+        .sidebar-link.active::before {
+            opacity: 1;
+            color: var(--primary);
+        }
+
+        .sidebar-link-number {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 24px;
+            font-size: 0.85rem;
+            margin-right: 0.75rem;
+            font-weight: 700;
+        }
+
+        .sidebar-link.active .sidebar-link-number {
+            background: var(--secondary);
+        }
+
+        .sidebar-link:first-child .sidebar-link-number {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            width: auto;
+            padding: 0 0.5rem;
+            border-radius: 6px;
+            font-size: 1rem;
+            line-height: 24px;
+        }
+
+        .content-wrapper {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .phase-section {
+            display: none;
+        }
+
+        .phase-section.active {
+            display: block;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            margin-bottom: 0.5rem;
+        }
+
+        .header-meta {
+            font-size: 0.9rem;
+            opacity: 0.85;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .overview {
+            background: var(--bg-white);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .overview h2 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .overview p {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .advantages {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .advantage-card {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(236, 72, 153, 0.05) 100%);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.5rem;
+            border-left: 4px solid var(--primary);
+        }
+
+        .advantage-card h4 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .advantage-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .nav-tabs {
+            display: none;
+        }
+
+        .nav-tab {
+            display: none;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .phase-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 2.5rem 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+        }
+
+        .phase-header h2 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .phase-header p {
+            font-size: 1rem;
+            opacity: 0.95;
+            font-weight: 500;
+        }
+
+        .phase-goal {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(16, 185, 129, 0.05) 100%);
+            border-left: 4px solid var(--success);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            color: var(--text-dark);
+        }
+
+        .phase-goal strong {
+            color: var(--success);
+        }
+
+        .section-card {
+            background: var(--bg-white);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            border-top: 4px solid var(--primary);
+        }
+
+        .section-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .subsection {
+            margin-bottom: 1.5rem;
+        }
+
+        .subsection h4 {
+            color: var(--text-dark);
+            margin: 1rem 0 0.5rem 0;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .cert-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        .cert-badge {
+            background: var(--bg-light);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .cert-badge:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow);
+        }
+
+        .cert-name {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .cert-price {
+            color: var(--warning);
+            font-weight: 600;
+            margin: 0.5rem 0;
+        }
+
+        .cert-details {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        ul, ol {
+            margin: 1rem 0 1rem 1.5rem;
+            color: var(--text-light);
+        }
+
+        ul li, ol li {
+            margin-bottom: 0.5rem;
+        }
+
+        ul li a, ol li a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+
+        ul li a:hover, ol li a:hover {
+            color: var(--secondary);
+            text-decoration: underline;
+        }
+
+        .event-item a, .subsection a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+
+        .event-item a:hover, .subsection a:hover {
+            color: var(--secondary);
+            text-decoration: underline;
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, rgba(99, 102, 241, 0.2) 0%, rgba(236, 72, 153, 0.2) 100%);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            border-left: 4px solid var(--primary);
+        }
+
+        .milestone-checklist {
+            background: var(--bg-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+
+        .milestone {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 0.75rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .milestone:last-child {
+            border-bottom: none;
+        }
+
+        .milestone-checkbox {
+            min-width: 24px;
+            width: 24px;
+            height: 24px;
+            border: 2px solid var(--primary);
+            border-radius: 4px;
+            margin-right: 1rem;
+            margin-top: 2px;
+        }
+
+        .milestone-text {
+            color: var(--text-dark);
+        }
+
+        .event-list {
+            list-style: none;
+            margin: 1rem 0;
+        }
+
+        .event-item {
+            padding: 1rem;
+            background: var(--bg-light);
+            margin-bottom: 0.5rem;
+            border-radius: 6px;
+            border-left: 3px solid var(--primary);
+            color: var(--text-dark);
+        }
+
+        .timeline {
+            position: relative;
+            padding: 1rem 0;
+        }
+
+        .timeline-item {
+            padding-left: 2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 12px;
+            height: 12px;
+            background: var(--primary);
+            border-radius: 50%;
+            border: 3px solid var(--bg-white);
+            box-shadow: 0 0 0 2px var(--primary);
+        }
+
+        .timeline-item strong {
+            color: var(--primary);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-light);
+            border-top: 1px solid var(--border);
+            margin-top: 3rem;
+        }
+
+        .footer a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: background 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .cta-button:hover {
+            background: var(--primary-dark);
+        }
+
+        @media (max-width: 768px) {
+            .main-wrapper {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                border-right: none;
+                border-bottom: 2px solid var(--border);
+                overflow-y: visible;
+                max-height: none;
+            }
+
+            .sidebar-nav {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0.5rem;
+                padding: 1rem;
+            }
+
+            .sidebar-nav li {
+                flex: 1;
+                min-width: 150px;
+            }
+
+            .sidebar-link {
+                padding: 0.75rem 1rem;
+                text-align: center;
+                border-bottom: 3px solid transparent;
+                border-left: none;
+                font-size: 0.9rem;
+            }
+
+            .sidebar-link:hover,
+            .sidebar-link.active {
+                border-bottom-color: var(--primary);
+                border-left: none;
+            }
+
+            .sidebar-header {
+                display: none;
+            }
+
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            .phase-header h2 {
+                font-size: 1.5rem;
+            }
+
+            .section-card {
+                padding: 1.5rem;
+            }
+
+            .cert-list {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .track-badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: var(--primary);
+            color: white;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .track-badge.full-stack {
+            background: var(--secondary);
+        }
+
+        .track-badge.data {
+            background: var(--warning);
+        }
+
+        .link-badge {
+            display: inline-block;
+            margin-top: 0.5rem;
+        }
+
+        .link-badge a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border: 1px solid var(--primary);
+            padding: 0.4rem 0.8rem;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+        }
+
+        .link-badge a:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .contact-section {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(236, 72, 153, 0.1) 100%);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            border-left: 4px solid var(--primary);
+        }
+
+        .contact-section h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .contact-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .contact-links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1.2rem;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        .contact-links a:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🚀 Shreya Y - M.Sc AI Career Roadmap</h1>
+        <p>Class of 2027 | Dublin City University</p>
+        <div class="header-meta">
+            <p>A comprehensive 12-month strategy to land your dream internship & full-time role</p>
+        </div>
+    </header>
+
+    <div class="main-wrapper">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h3>📍 Your Roadmap</h3>
+            </div>
+            <ul class="sidebar-nav">
+                <li><button class="sidebar-link" onclick="switchPhase(event, 'intro')"><span class="sidebar-link-number">✨</span>Your Journey</button></li>
+                <li style="border-top: 1px solid var(--border); margin-top: 0.5rem; padding-top: 0.5rem;"></li>
+                <li><button class="sidebar-link" onclick="switchPhase(event, 'phase1')"><span class="sidebar-link-number">1</span>Oct - Dec 2026</button></li>
+                <li><button class="sidebar-link" onclick="switchPhase(event, 'phase2')"><span class="sidebar-link-number">2</span>Jan - Mar 2027</button></li>
+                <li><button class="sidebar-link" onclick="switchPhase(event, 'phase3')"><span class="sidebar-link-number">3</span>Apr - Jun 2027</button></li>
+                <li><button class="sidebar-link" onclick="switchPhase(event, 'phase4')"><span class="sidebar-link-number">4</span>Jul - Sep 2027</button></li>
+            </ul>
+        </aside>
+
+        <div class="content-wrapper">
+            <div class="container">
+                <!-- Overview Section -->
+                <section id="intro" class="overview phase-section">
+            <h2>Your Journey: From Student to Professional</h2>
+            <p>
+                This roadmap transforms you from a strong M.Sc AI student into a highly competitive internship candidate by September 2027.
+                Over the next 12 months, you'll master cutting-edge AI/ML technologies, build a visible portfolio, network strategically
+                with Dublin's vibrant tech community, and land a 6-9 month internship at a top company—positioning you for a full-time
+                AI Engineer or Full Stack Developer role post-graduation.
+            </p>
+
+            <h3 style="color: var(--text-dark); margin-top: 2rem; margin-bottom: 1rem;">Your Competitive Advantages</h3>
+            <div class="advantages">
+                <div class="advantage-card">
+                    <h4>🎓 DCU Connections</h4>
+                    <p>Strong AI research through Insight Centre and ML-Labs partnership</p>
+                </div>
+                <div class="advantage-card">
+                    <h4>🌍 Dublin Tech Hub</h4>
+                    <p>50+ active meetups, GDG communities, and tech events</p>
+                </div>
+                <div class="advantage-card">
+                    <h4>📚 Free Certifications</h4>
+                    <p>Google, AWS, Anthropic, and cloud platforms offer valuable credentials</p>
+                </div>
+                <div class="advantage-card">
+                    <h4>💼 Internship Pipeline</h4>
+                    <p>61+ internships available for Class of 2027 in Dublin/Ireland</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Phase 1 -->
+        <section id="phase1" class="phase-section">
+            <div class="phase-header">
+                <h2>Phase 1: Oct-Dec 2026 — Foundation & Community</h2>
+                <p>Semester 1: Master fundamentals, establish community presence, start certifications</p>
+            </div>
+
+            <div class="phase-goal">
+                <strong>🎯 Goal:</strong> Build a strong foundation in AI theory, earn your first certifications, and become an active member of Dublin's tech community.
+            </div>
+
+            <div class="section-card">
+                <h3>📚 DCU Modules This Semester</h3>
+                <ul>
+                    <li>Professional and Research Practice</li>
+                    <li>Foundations of Artificial Intelligence (Core)</li>
+                    <li>Statistical Data Analysis (Core)</li>
+                    <li>Data Analytics and Data Mining (Core)</li>
+                    <li>Machine Learning (Core)</li>
+                </ul>
+            </div>
+
+            <div class="section-card">
+                <h3>🏅 Free Certifications (Complete by December)</h3>
+                <div class="cert-list">
+                    <div class="cert-badge">
+                        <div class="cert-name">Google ML Crash Course</div>
+                        <div class="cert-price">FREE</div>
+                        <div class="cert-details">
+                            <strong>Duration:</strong> 15 hrs (2-3 hrs/week)<br>
+                            <strong>Focus:</strong> Machine Learning fundamentals<br>
+                            <strong>Aligned with:</strong> Machine Learning module
+                        </div>
+                        <div class="link-badge">
+                            <a href="https://developers.google.com/machine-learning/crash-course" target="_blank">🔗 Start Course</a>
+                        </div>
+                    </div>
+                    <div class="cert-badge">
+                        <div class="cert-name">Google Intro to Generative AI</div>
+                        <div class="cert-price">FREE</div>
+                        <div class="cert-details">
+                            <strong>Duration:</strong> 2.5 hrs (1 week)<br>
+                            <strong>Focus:</strong> Generative AI basics<br>
+                            <strong>Aligned with:</strong> Data Analytics module
+                        </div>
+                        <div class="link-badge">
+                            <a href="https://www.cloudskillsboost.google/course/introduction-to-generative-ai-learning-path" target="_blank">🔗 Start Course</a>
+                        </div>
+                    </div>
+                    <div class="cert-badge">
+                        <div class="cert-name">Anthropic Academy</div>
+                        <div class="cert-price">FREE</div>
+                        <div class="cert-details">
+                            <strong>Duration:</strong> 2-3 hrs/week<br>
+                            <strong>Focus:</strong> Claude & agentic AI<br>
+                            <strong>Aligned with:</strong> Foundations of AI
+                        </div>
+                        <div class="link-badge">
+                            <a href="https://www.anthropic.com/academy" target="_blank">🔗 Start Learning</a>
+                        </div>
+                    </div>
+                    <div class="cert-badge">
+                        <div class="cert-name">AWS Cloud Practitioner</div>
+                        <div class="cert-price">FREE</div>
+                        <div class="cert-details">
+                            <strong>Duration:</strong> 6 hrs (1-2 weeks)<br>
+                            <strong>Focus:</strong> Cloud fundamentals<br>
+                            <strong>Aligned with:</strong> Foundation knowledge
+                        </div>
+                        <div class="link-badge">
+                            <a href="https://explore.skillbuilder.aws/learn/course/aws-cloud-practitioner-essentials" target="_blank">🔗 Start Course</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-card">
+                <h3>💰 Paid Certification (Optional but Recommended)</h3>
+                <div class="cert-badge" style="background: linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(245, 158, 11, 0.05) 100%);">
+                    <div class="cert-name" style="color: var(--warning);">AWS Certified AI Practitioner (AIF-C01)</div>
+                    <div class="cert-price">$100 USD</div>
+                    <div class="cert-details">
+                        <strong>Duration:</strong> 40 hrs prep (Dec 15-31)<br>
+                        <strong>Coverage:</strong> AI/ML fundamentals, responsible AI, AWS AI services<br>
+                        <strong>Aligned with:</strong> Statistical Data Analysis + Machine Learning modules<br>
+                        <strong>When:</strong> December after ML Crash Course<br>
+                        <strong>ROI:</strong> Entry-level credential, widely recognized
+                    </div>
+                    <div class="link-badge">
+                        <a href="https://aws.amazon.com/certification/certified-ai-practitioner/" target="_blank">🔗 Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-card">
+                <h3>🌐 Community Engagement</h3>
+                <div class="highlight">
+                    <strong>Join these communities & attend at least 3 events:</strong>
+                </div>
+                <ul>
+                    <li><strong><a href="https://www.meetup.com/dublin-ai-developers/" target="_blank">Dublin AI Developers Group</a></strong> (2,000+ members) - Monthly meetups</li>
+                    <li><strong><a href="https://dublin.devfest.dev/" target="_blank">DevFest Ireland 2026</a></strong> (Nov 28, NCI Dublin) - €5 early bird ticket</li>
+                    <li><strong><a href="https://www.meetup.com/AI-Tinkerers-Dublin/" target="_blank">AI Tinkerers Dublin</a></strong> - Monthly demo nights, hands-on builders</li>
+                    <li><strong><a href="https://dublintechsummit.com/" target="_blank">Dublin Tech Summit</a></strong> - Active Discord community</li>
+                    <li><strong><a href="https://gdg.community.dev/gdg-dublin/" target="_blank">GDG Dublin</a></strong> - Monthly events on AI, Cloud, Emerging Tech</li>
+                </ul>
+
+                <h4 style="margin-top: 1.5rem;">DCU Clubs to Join</h4>
+                <ul>
+                    <li>AI/ML Society</li>
+                    <li>Data Science Club</li>
+                    <li>Code Jam Club</li>
+                    <li>Insight Centre seminars (world-class research)</li>
+                </ul>
+            </div>
+
+            <div class="section-card">
+                <h3>📂 Portfolio Foundations</h3>
+                <ul>
+                    <li>Set up GitHub with professional username and clear README</li>
+                    <li>Create 2-3 coursework projects (ML algorithms, data analysis)</li>
+                    <li>Write first blog post: "My M.Sc AI Journey" (500+ words on Medium/Hashnode)</li>
+                    <li>Star 10-15 relevant repos (transformers, TensorFlow, PyTorch)</li>
+                </ul>
+            </div>
+
+            <div class="section-card">
+                <h3>✅ Phase 1 Milestones</h3>
+                <div class="milestone-checklist">
+                    <div class="milestone">
+                        <div class="milestone-checkbox"></div>
+                        <div class="milestone-text">All 4 free certifications completed with badges saved</div>
+                    </div>
+                    <div class="milestone">
+                        <div class="milestone-checkbox"></div>
+                        <div class="milestone-text">AWS AI Practitioner exam passed (December)</div>
+                    </div>
+                    <div class="milestone">
+                        <div class="milestone-checkbox"></div>
+                        <div class="milestone-text">Attended 3+ Dublin tech meetups</div>
+                    </div>
+                    <div class="milestone">
+                        <div class="milestone-checkbox"></div>
+                        <div class="milestone-text">First blog post published (500+ words, 100+ views)</div>
+                    </div>
+                    <div class="milestone">
+                        <div class="milestone-checkbox"></div>
+                        <div class="milestone-text">GitHub repo with 2-3 DCU coursework projects</div>
+                    </div>
+                    <div class="milestone">
+                        <div class="milestone-checkbox"></div>
+                        <div class="milestone-text">Joined 2-3 DCU clubs (especially AI/ML Society)</div>
+                    </div>
+                    <div class="milestone">
+                        <div class="milestone-checkbox"></div>
+                        <div class="milestone-text">Distinction grades or near-distinction in core modules</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Phase 2 -->
+        <section id="phase2" class="phase-section">
+            <div class="phase-header">
+                <h2>Phase 2: Jan-Mar 2027 — Skill Building & Visibility</h2>
+                <p>Semester 2: Deepen technical expertise, build visible portfolio, prepare for internship applications</p>
+            </div>
+
+            <div class="phase-goal">
+                <strong>🎯 Goal:</strong> Complete advanced cloud certification, deploy 3 production-ready projects, publish 8+ blog articles, contribute to open-source, and build your professional brand.
+            </div>
+
+            <div class="section-card">
+                <h3>📚 DCU Modules This Semester</h3>
+                <ul>
+                    <li>AI, Information and Information Seeking (Core)</li>
+                    <li>Data Management and Visualization (Core)</li>
+                    <li>Statistical Machine Translation (Elective) OR Mechanics of Search (Elective)</li>
+                    <li>Capstone/Practicum preparation begins</li>
+                </ul>
+            </div>
+
+            <div class="section-card">
+                <h3>🏅 Advanced Paid Certifications (Choose 1-2)</h3>
+                <div class="cert-list">
+                    <div class="cert-badge">
+                        <div class="cert-name" style="color: var(--primary);">🚀 Google Cloud Professional ML Engineer</div>
+                        <div class="cert-price">$200 USD</div>
+                        <div class="track-badge">AI Engineer Track</div>
+                        <div class="cert-details">
+                            <strong>Duration:</strong> 80-100 hrs (Jan-Feb)<br>
+                            <strong>Coverage:</strong> ML pipelines, Vertex AI, MLOps, deployment<br>
+                            <strong>Difficulty:</strong> ⭐⭐⭐⭐ (50% pass rate)<br>
+                            <strong>ROI:</strong> Highest-paying (~$25-40k salary premium)
+                        </div>
+                        <div class="link-badge">
+                            <a href="https://cloud.google.com/learn/certification/machine-learning-engineer" target="_blank">🔗 Learn More</a>
+                        </div>
+                    </div>
+                    <div class="cert-badge">
+                        <div class="cert-name" style="color: var(--secondary);">Azure AI Engineer Associate (AI-102)</div>
+                        <div class="cert-price">$165 USD</div>
+                        <div class="track-badge full-stack">Full Stack + AI Track</div>
+                        <div class="cert-details">
+                            <strong>Duration:</strong> 60-80 hrs (Jan-Feb)<br>
+                            <strong>Coverage:</strong> Azure OpenAI, ML, AI-powered apps<br>
+                            <strong>Difficulty:</strong> ⭐⭐⭐ (65% pass rate)<br>
+                            <strong>ROI:</strong> Strong in enterprise, full-stack roles
+                        </div>
+                        <div class="link-badge">
+                            <a href="https://learn.microsoft.com/en-us/credentials/certifications/ai-engineer/" target="_blank">🔗 Learn More</a>
+                        </div>
+                    </div>
+                    <div class="cert-badge">
+                        <div class="cert-name">AWS ML Engineer Associate (MLA-C01)</div>
+                        <div class="cert-price">$150 USD</div>
+                        <div class="cert-details">
+                            <strong>Duration:</strong> 70-90 hrs<br>
+                            <strong>Coverage:</strong> SageMaker, data prep, model training<br>
+                            <strong>Difficulty:</strong> ⭐⭐⭐ (65% pass rate)<br>
+                            <strong>ROI:</strong> Widest market recognition
+                        </div>
+                        <div class="link-badge">
+                            <a href="https://aws.amazon.com/certification/certified-machine-learning-engineer-associate/" target="_blank">🔗 Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-card">
+                <h3>💻 Build 3 Substantial Portfolio Projects</h3>
+                <div class="highlight">
+                    <strong>These are your key differentiators—deploy them publicly</strong>
+                </div>
+                <div class="subsection">
+                    <h4>1️⃣ Production ML System</h4>
+                    <p>Build a complete ML pipeline: data processing → model → API</p>
+                    <ul>
+                        <li>Deploy on cloud (AWS/GCP/Azure depending on your cert)</li>
+                        <li>Use free tier: Hugging Face Spaces, Vercel, Cloud Run</li>
+                        <li>Include clear documentation and metrics</li>
+                    </ul>
+                </div>
+                <div class="subsection">
+                    <h4>2️⃣ Full Stack AI Application</h4>
+                    <p>React/Vue frontend + Python/Node backend + LLM integration</p>
+                    <ul>
+                        <li>Real use case: chatbot, recommendation engine, data viz</li>
+                        <li>Deploy end-to-end (Vercel + Firebase/Cloud Run)</li>
+                        <li>Showcase modern web + AI integration</li>
+                    </ul>
+                </div>
+                <div class="subsection">
+                    <h4>3️⃣ Information Retrieval/RAG Project</h4>
+                    <p>Semantic search or Retrieval-Augmented Generation system</p>
+                    <ul>
+                        <li>Use embeddings (OpenAI, Anthropic, or open-source)</li>
+                        <li>Real dataset: GitHub issues, research papers, product catalogs</li>
+                        <li>Aligned with your AI Information Seeking elective</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section-card">
+                <h3>📝 Blog Writing Series (8+ articles)</h3>
+                <p>Publish <strong>one article every 2 weeks</strong> on
+                    <a href="https://medium.com" target="_blank">Medium</a>,
+                    <a href="https://hashnode.com" target="_blank">Hashnode</a>, or
+                    <a href="https://dev.to" target="_blank">Dev.to</a>
+                </p>
+                <ul>
+                    <li>"Building Production ML Systems: From DCU Lab to Cloud"</li>
+                    <li>"Full Stack AI: Integrating Claude API into React"</li>
+                    <li>"What I Learned from Google's ML Crash Course"</li>
+                    <li>"Semantic Search & RAG: Implementing Retrieval-Augmented Generation"</li>
+                    <li>"From M.Sc to Internship: My Career Pivot Strategy"</li>
+                    <li>"The Future of Agentic AI: What Every Developer Should Know"</li>
+                    <li>Case study on one of your GitHub projects</li>
+                    <li>"Choosing Between Google Cloud, AWS, and Azure for ML"</li>
+                </ul>
+            </div>
+
+            <div class="section-card">
+                <h3>🐙 Open-Source Contributions</h3>
+                <p><strong>Goal: 5+ merged PRs by end of Phase 2</strong></p>
+                <ul>
+                    <li><strong><a href="https://github.com/langchain-ai/langchain" target="_blank">LangChain</a>:</strong> Documentation or new integrations</li>
+                    <li><strong><a href="https://github.com/huggingface/transformers" target="_blank">Hugging Face Transformers</a>:</strong> Model cards or bug fixes</li>
+                    <li><strong><a href="https://github.com/openai/openai-cookbook" target="_blank">OpenAI Cookbook</a>:</strong> Add Claude API examples</li>
+                    <li><strong><a href="https://github.com/anthropics/anthropic-sdk-python" target="_blank">Anthropic SDK</a>:</strong> Examples and documentation</li>
+                    <li>Start with documentation, then code contributions</li>
+                </ul>
+            </div>
+
+            <div class="section-card">
+                <h3>🤝 Strategic Networking Events (Jan-Mar)</h3>
+                <div class="event-list">
+                    <div class="event-item"><strong><a href="https://www.meetup.com/dublin-ai-developers/" target="_blank">Dublin AI Developers Group</a></strong> - Monthly talks</div>
+                    <div class="event-item"><strong><a href="https://www.meetup.com/AI-Tinkerers-Dublin/" target="_blank">AI Tinkerers Dublin</a></strong> - Demo nights</div>
+                    <div class="event-item"><strong><a href="https://www.meetup.com/aws-dublin/" target="_blank">AWS Dublin Meetup</a></strong> - March 24</div>
+                    <div class="event-item"><strong><a href="https://www.eventbrite.ie/" target="_blank">Build Prod AI Agents Workshop</a></strong> - Feb 7</div>
+                    <div class="event-item"><strong><a href="https://www.meetup.com/Dublin-AI-VC/" target="_blank">Dublin AI & VC Meetup</a></strong> - March 10</div>
+                    <div class="event-item"><strong><a href="https://www.servicenow.com/events/" target="_blank">ServiceNow AI Summit</a></strong> - March 4</div>
+                    <div class="event-item"><strong><a href="https://gdg.community.dev/gdg-dublin/" target="_blank">GDG Dublin Events</a></strong> - Monthly talks</div>
+                </div>
+            </div>
+
+            <div class="section-card">
+                <h3>✅ Phase 2 Milestones</h3>
+                <div class="milestone-checklist">
+                    <div class="milestone">
+                        <div class="milestone-checkbox"></div>
+                        <div class="milestone-text">Paid cloud cert exam passed ($150-200)</div>
+                    </div>
+                    <div class="milestone">
+                        <div class="milestone-checkbox"></div>
+                        <div class="milestone-text">3 substantial GitHub projects deployed and documented</div>
+                    </div>
+                    <div class="milestone">
+                        <div class="milestone-checkbox"></div>
+                        <div class="milestone-text">8+ blog articles published, 500+ total views</div>
+                    </div>
+                    <div class="milestone">
+                        <div class="milestone-checkbox"></div>
+                        <div class="milestone-text">5+ open-source contributions merged</div>
+                    </div>
+                    <div class="milestone">
+                        <div class="milestone-checkbox"></div>
+                        <div class="milestone-text">500+ LinkedIn connections, 10+ posts published</div>
+                    </div>
+                    <div class="milestone">
+                        <div class="milestone-checkbox"></div>
+                        <div class="milestone-text">Resume v2 complete and reviewed by mentors</div>
+                    </div>
+                    <div class="milestone">
+                        <div class="milestone-checkbox"></div>
+                        <div class="milestone-text">Attended 6+ tech meetups</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Phase 3 -->
+        <section id="phase3" class="phase-section">
+            <div class="phase-header">
+                <h2>Phase 3: Apr-Jun 2027 — Internship Push</h2>
+                <p>Practicum Semester: Apply to 50+ internships, ace technical interviews, secure offers</p>
+            </div>
+
+            <div class="phase-goal">
+                <strong>🎯 Goal:</strong> Secure 2+ internship offers from top-tier companies. Most internships run Jan 15 - Aug 13, 2027 (6-9 months).
+            </div>
+
+            <div class="section-card">
+                <h3>🎯 Internship Opportunities - Class of 2027</h3>
+
+                <div class="highlight">
+                    <strong>📌 Job Boards & Application Platforms:</strong>
+                    <div class="link-badge" style="margin-top: 1rem;">
+                        <a href="https://www.linkedin.com/jobs/search/?keywords=internship&location=Dublin&distance=50" target="_blank">LinkedIn</a>
+                        <a href="https://www.indeed.ie/internships?l=Dublin" target="_blank">Indeed Ireland</a>
+                        <a href="https://www.glassdoor.ie/Job/index.htm" target="_blank">Glassdoor</a>
+                        <a href="https://www.graduateland.com/" target="_blank">GraduateLand</a>
+                        <a href="https://www.targetjobs.com/" target="_blank">TargetJobs</a>
+                        <a href="https://www.heydesigner.com/design-internships/" target="_blank">HeyDesigner</a>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <h4>🇮🇪 Dublin Tech Hub - TIER 1 (Apply October - December 2026)</h4>
+                    <ul>
+                        <li><strong><a href="https://www.amazon.jobs/en/job_categories/internships-and-fellowships" target="_blank">Amazon</a></strong> - SDE/ML Intern | 📅 Opens: Early October 2026 | Duration: 3-4 months | €16-18/hr</li>
+                        <li><strong><a href="https://careers.google.com/jobs/results/?q=internship&location=Dublin" target="_blank">Google</a></strong> - Software Engineering Intern | 📅 Opens: October 2026 | Duration: 3 months | €17-20/hr</li>
+                        <li><strong><a href="https://careers.microsoft.com/us/en/search-results?keywords=internship" target="_blank">Microsoft</a></strong> - AI/ML Intern | 📅 Opens: November 2026 | Duration: 3-4 months | €17-19/hr</li>
+                        <li><strong><a href="https://www.apple.com/careers/students/" target="_blank">Apple</a></strong> - Software Engineering Intern | 📅 Opens: October 2026 | Duration: 3-6 months | €16-18/hr</li>
+                        <li><strong><a href="https://careers.servicenow.com/en-us/jobs/internships/" target="_blank">ServiceNow</a></strong> - Software Developer Intern | 📅 Opens: November 2026 | Duration: 3-4 months | €15-17/hr</li>
+                        <li><strong><a href="https://www.mastercard.us/en-us/careers.html" target="_blank">Mastercard</a></strong> - SWE/AI Intern | 📅 Opens: October 2026 | Duration: 3-4 months | €16-18/hr</li>
+                        <li><strong><a href="https://www.accenture.com/ie-en/careers/local" target="_blank">Accenture</a></strong> - Technology Consultant Intern | 📅 Opens: October 2026 | Duration: 6-12 months | €14-16/hr</li>
+                        <li><strong><a href="https://www.ibm.com/careers/" target="_blank">IBM</a></strong> - Software Engineer Intern | 📅 Opens: November 2026 | Duration: 3-6 months | €15-17/hr</li>
+                    </ul>
+                </div>
+
+                <div class="subsection">
+                    <h4>🇮🇪 Other Major Tech Companies - TIER 2 (Apply November 2026 - January 2027)</h4>
+                    <ul>
+                        <li><strong><a href="https://careers.opentext.com/" target="_blank">OpenText</a></strong> - AI/ML Intern, Cork/Dublin | 📅 Opens: November 2026 | Duration: 4-6 months | €13-15/hr</li>
+                        <li><strong><a href="https://careers.qualcomm.com/careers" target="_blank">Qualcomm</a></strong> - Software/Hardware Intern, Cork | 📅 Opens: December 2026 | Duration: 3-6 months | €14-16/hr</li>
+                        <li><strong><a href="https://www.analog.com/en/careers.html" target="_blank">Analog Devices</a></strong> - Engineering Intern, Limerick | 📅 Opens: November 2026 | Duration: 3-6 months | €13-15/hr</li>
+                        <li><strong><a href="https://careers.amd.com/careers-home/students/" target="_blank">AMD</a></strong> - Software/ML Intern | 📅 Opens: October 2026 | Duration: 3-6 months | €14-16/hr</li>
+                        <li><strong><a href="https://www.redhat.com/en/jobs" target="_blank">Red Hat</a></strong> - Open Source Software Intern, Waterford | 📅 Opens: November 2026 | Duration: 3-6 months | €13-15/hr</li>
+                        <li><strong><a href="https://careers.sunlife.com/en/jobs" target="_blank">Sun Life</a></strong> - Technology Intern, Waterford | 📅 Opens: December 2026 | Duration: 6-12 months | €12-14/hr</li>
+                        <li><strong><a href="https://careers.tcs.com/" target="_blank">Tata Consultancy Services (TCS)</a></strong> - IT/AI Intern | 📅 Opens: January 2027 | Duration: 3-6 months | €12-14/hr</li>
+                        <li><strong><a href="https://www.infosys.com/careers.html" target="_blank">Infosys</a></strong> - Software Developer Intern | 📅 Opens: December 2026 | Duration: 3-6 months | €11-13/hr</li>
+                    </ul>
+                </div>
+
+                <div class="subsection">
+                    <h4>🚀 AI/ML Startups & Emerging Tech - TIER 3 (Apply November 2026 - February 2027)</h4>
+                    <ul>
+                        <li><strong><a href="https://www.strikedeck.com/careers" target="_blank">StrikeDeck</a></strong> - AI/ML Intern, Dublin | 📅 Opens: December 2026 | Duration: 3-6 months | €12-15/hr</li>
+                        <li><strong><a href="https://www.workato.com/careers/" target="_blank">Workato</a></strong> - Software Intern | 📅 Opens: November 2026 | Duration: 3-4 months | €12-14/hr</li>
+                        <li><strong><a href="https://www.intercom.com/careers" target="_blank">Intercom</a></strong> - Software Engineer Intern, Dublin | 📅 Opens: December 2026 | Duration: 3-4 months | €13-15/hr</li>
+                        <li><strong><a href="https://www.wise.com/careers/" target="_blank">Wise (TransferWise)</a></strong> - Software Engineer Intern | 📅 Opens: November 2026 | Duration: 3-6 months | €13-15/hr</li>
+                        <li><strong><a href="https://www.getir.com/careers" target="_blank">Getir</a></strong> - Software Developer Intern | 📅 Opens: December 2026 | Duration: 3-6 months | €11-13/hr</li>
+                        <li><strong><a href="https://www.thoughtworks.com/careers" target="_blank">ThoughtWorks</a></strong> - Tech Lead Intern | 📅 Opens: January 2027 | Duration: 6-12 months | €13-15/hr</li>
+                        <li><strong><a href="https://www.citco.com/en-us/careers.html" target="_blank">Citco</a></strong> - Technology Intern, Dublin | 📅 Opens: November 2026 | Duration: 3-6 months | €12-14/hr</li>
+                        <li><strong><a href="https://www.sosandar.com/careers" target="_blank">SOS&Co</a></strong> - Software Engineering Intern | 📅 Opens: January 2027 | Duration: 3-6 months | €11-13/hr</li>
+                    </ul>
+                </div>
+
+                <div class="subsection">
+                    <h4>📍 Regional Opportunities - TIER 4 (Apply December 2026 - February 2027)</h4>
+                    <ul>
+                        <li><strong><a href="https://www.kerry.com/careers" target="_blank">Kerry Group</a></strong> - ICT/Data Analyst Intern, Tralee | 📅 Opens: December 2026 | Duration: 6-12 months | €11-13/hr</li>
+                        <li><strong><a href="https://careers.genesys.com/careers-home/students/" target="_blank">Genesys</a></strong> - Software Engineer Intern, Galway | 📅 Opens: November 2026 | Duration: 3-6 months | €12-14/hr</li>
+                        <li><strong><a href="https://www.astellas.com/global/careers/" target="_blank">Astellas Pharma</a></strong> - IT/Data Intern, Cork | 📅 Opens: January 2027 | Duration: 3-6 months | €11-13/hr</li>
+                        <li><strong><a href="https://www.medtronic.com/careers" target="_blank">Medtronic</a></strong> - Software/ML Intern, Cork | 📅 Opens: December 2026 | Duration: 3-6 months | €12-14/hr</li>
+                        <li><strong><a href="https://www.smurfit-westrock.com/careers" target="_blank">Smurfit WestRock</a></strong> - Data Science Intern, Dublin | 📅 Opens: January 2027 | Duration: 3-6 months | €11-13/hr</li>
+                    </ul>
+                </div>
+
+                <div class="highlight" style="margin-top: 1.5rem;">
+                    <strong>💡 Pro Tips:</strong>
+                    <ul style="margin-top: 0.5rem;">
+                        <li>Set calendar reminders for application opening dates (typically 3-4 months before start date)</li>
+                        <li>Apply in batches: Tier 1 first, then Tier 2-3 within 1-2 weeks</li>
+                        <li>Customize your resume & cover letter for each company</li>
+                        <li>Target 50+ applications by end of January 2027</li>
+                        <li>Follow up after 1-2 weeks if you haven't heard back</li>
+                        <li>Interview season: January - March 2027 (expect phone screens & technical rounds)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section-card">
+                <h3>📋 Application Strategy</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <strong>Week 1-2 April:</strong> Apply to 5-7 Tier 1 companies
+                    </div>
+                    <div class="timeline-item">
+                        <strong>Week 2-3 April:</strong> Apply to 8-10 Tier 2 companies
+                    </div>
+                    <div class="timeline-item">
+                        <strong>Week 3-4 April:</strong> Apply to Tier 3 backup options
+                    </div>
+                    <div class="timeline-item">
+                        <strong>May:</strong> Follow-ups and second wave applications
+                    </div>
+                    <div class="timeline-item">
+                        <strong>Target:</strong> <strong>50+ applications by June 1</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-card">
+                <h3>💡 Technical Interview Prep</h3>
+
+                <div class="subsection">
+                    <h4><a href="https://leetcode.com" target="_blank">LeetCode</a> Practice</h4>
+                    <ul>
+                        <li>100+ medium/hard problems (Arrays, Strings, Trees, Graphs, DP)</li>
+                        <li>Focus: Problem-solving speed and clean code</li>
+                        <li>Also check: <a href="https://www.hackerrank.com" target="_blank">HackerRank</a>, <a href="https://www.codewars.com" target="_blank">CodeWars</a></li>
+                    </ul>
+                </div>
+
+                <div class="subsection">
+                    <h4>AI/ML Specific</h4>
+                    <ul>
+                        <li>Deep knowledge of transformers, attention, fine-tuning, RAG, LLMs</li>
+                        <li>Discuss your 3 GitHub projects in detail</li>
+                        <li>Explain trade-offs in model selection</li>
+                    </ul>
+                </div>
+
+                <div class="subsection">
+                    <h4>Technical Skills</h4>
+                    <ul>
+                        <li><strong>SQL:</strong> 20+ queries (joins, window functions)</li>
+                        <li><strong>Docker:</strong> Containerize 2 portfolio projects</li>
+                        <li><strong>CI/CD:</strong> GitHub Actions on projects</li>
+                        <li><strong>Cloud:</strong> SageMaker / Vertex AI / Azure ML hands-on</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section-card">
+                <h3>🔗 Networking for Referrals</h3>
+                <ul>
+                    <li>Search target companies on LinkedIn, message employees</li>
+                    <li>Ask speakers/meetup attendees for coffee chats</li>
+                    <li>Find recruiter emails, send personalized outreach</li>
+                    <li>Check DCU alumni network for existing connections</li>
+                    <li><strong>Pro Tip:</strong> Referrals increase callback rate from 5% to 50%+</li>
+                </ul>
+            </div>
+
+            <div class="section-card">
+                <h3>✅ Phase 3 Milestones</h3>
+                <div class="milestone-checklist">
+                    <div class="milestone">
+                        <div class="milestone-checkbox"></div>
+                        <div class="milestone-text">Applied to 50+ internships by June 1</div>
+                    </div>
+                    <div class="milestone">
+                        <div class="milestone-checkbox"></div>
+                        <div class="milestone-text">3+ phone/video screening interviews completed</div>
+                    </div>
+                    <div class="milestone">
+                        <div class="milestone-checkbox"></div>
+                        <div class="milestone-text">1+ technical interview made it to final rounds</div>
+                    </div>
+                    <div class="milestone">
+                        <div class="milestone-checkbox"></div>
+                        <div class="milestone-text">Received 2+ internship offers</div>
+                    </div>
+                    <div class="milestone">
+                        <div class="milestone-checkbox"></div>
+                        <div class="milestone-text">Negotiated best salary/location/timing terms</div>
+                    </div>
+                    <div class="milestone">
+                        <div class="milestone-checkbox"></div>
+                        <div class="milestone-text">DCU practicum project deliverable complete</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Phase 4 -->
+        <section id="phase4" class="phase-section">
+            <div class="phase-header">
+                <h2>Phase 4: Jul-Sep 2027 — Internship & Full-Time</h2>
+                <p>Practicum Completion: Excel at internship, gain production experience, secure full-time offer</p>
+            </div>
+
+            <div class="phase-goal">
+                <strong>🎯 Goal:</strong> Perform exceptionally during internship (Jan-Aug 2027), earn a glowing recommendation, and convert to a full-time offer (Oct-Nov 2027 start).
+            </div>
+
+            <div class="section-card">
+                <h3>⏰ Timeline</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <strong>Jul-Aug 2027:</strong> Internship runs, complete practicum
+                    </div>
+                    <div class="timeline-item">
+                        <strong>Sep 2027:</strong> Graduate with M.Sc AI
+                    </div>
+                    <div class="timeline-item">
+                        <strong>Oct-Nov 2027:</strong> Full-time offers arrive
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-card">
+                <h3>💼 During Your Internship (Jan-Aug 2027)</h3>
+
+                <div class="highlight">
+                    <strong>First Week at Company:</strong>
+                    <ul style="margin-top: 0.5rem;">
+                        <li>Onboard properly: understand tech stack & business problems</li>
+                        <li>Set clear goals with manager: 3-5 measurable outcomes</li>
+                        <li>Build relationships: lunch with teammates, attend events</li>
+                    </ul>
+                </div>
+
+                <div class="subsection">
+                    <h4>Execution Focus (Monthly)</h4>
+                    <ul>
+                        <li><strong>Contribute meaningfully:</strong> Own features, not just bug fixes</li>
+                        <li><strong>Document work:</strong> Clear PRs, commit messages, code comments</li>
+                        <li><strong>Seek feedback:</strong> 1:1s with manager every 1-2 weeks</li>
+                        <li><strong>Learn deeply:</strong> Understand codebase, data pipelines, ML infrastructure</li>
+                        <li><strong>Network internally:</strong> Connect across teams, attend tech talks</li>
+                    </ul>
+                </div>
+
+                <div class="subsection">
+                    <h4>Production ML Skills to Gain</h4>
+                    <ul>
+                        <li><strong>MLOps:</strong> Model versioning, experiment tracking, pipelines</li>
+                        <li><strong>Infrastructure:</strong> Docker, Kubernetes (basics), monitoring</li>
+                        <li><strong>Data Engineering:</strong> ETL pipelines, data quality</li>
+                        <li><strong>DevOps:</strong> CI/CD, GitHub Actions, automated testing</li>
+                        <li><strong>Business Acumen:</strong> How ML impacts company metrics/revenue</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section-card">
+                <h3>📚 Capture Your Internship Learning</h3>
+
+                <div class="subsection">
+                    <h4>Write 4 Blog Posts</h4>
+                    <ul>
+                        <li>"Building Production ML at [Industry]: Technical Deep-Dive"</li>
+                        <li>"MLOps Lessons from My Summer Internship"</li>
+                        <li>"Full-Stack Deployment: From Model to Production"</li>
+                        <li>"Engineering Culture: What I Learned Interning at a Tech Company"</li>
+                    </ul>
+                </div>
+
+                <div class="subsection">
+                    <h4>Document Impact</h4>
+                    <ul>
+                        <li>"Deployed model serving 500k+ inferences/day"</li>
+                        <li>"Reduced ML pipeline latency by 40%"</li>
+                        <li>"Improved recommendation accuracy by 15%"</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section-card">
+                <h3>🌟 Making a Strong Impression for Full-Time</h3>
+                <ul>
+                    <li><strong>Performance:</strong> Exceed expectations on assigned work</li>
+                    <li><strong>Initiative:</strong> Propose and own one extra high-impact project</li>
+                    <li><strong>Communication:</strong> Share progress transparently, escalate blockers early</li>
+                    <li><strong>Culture Fit:</strong> Be someone people want to work with daily</li>
+                    <li><strong>Leadership:</strong> Mentor junior intern, help teammates unblock</li>
+                    <li><strong>Conversion Timeline:</strong> Strong interns get offers by mid-internship (Apr-May)</li>
+                </ul>
+            </div>
+
+            <div class="section-card">
+                <h3>💰 Full-Time Job Market Prep (Aug-Sep)</h3>
+                <ul>
+                    <li>Build target list: 50-100 companies (AI startups, tech giants, fintech)</li>
+                    <li>Reach out to meetup contacts: "Graduating in Sep, looking for roles"</li>
+                    <li>Update LinkedIn: "Graduating M.Sc AI @ DCU, seeking AI Engineer roles"</li>
+                    <li>Target Dublin salary: <strong>€55-70k entry AI Engineer</strong></li>
+                </ul>
+            </div>
+
+            <div class="section-card">
+                <h3>✅ Phase 4 Milestones</h3>
+                <div class="milestone-checklist">
+                    <div class="milestone">
+                        <div class="milestone-checkbox"></div>
+                        <div class="milestone-text">2+ major projects delivered at internship</div>
+                    </div>
+                    <div class="milestone">
+                        <div class="milestone-checkbox"></div>
+                        <div class="milestone-text">Positive performance reviews from manager</div>
+                    </div>
+                    <div class="milestone">
+                        <div class="milestone-checkbox"></div>
+                        <div class="milestone-text">Full-time offer secured with negotiated terms</div>
+                    </div>
+                    <div class="milestone">
+                        <div class="milestone-checkbox"></div>
+                        <div class="milestone-text">4 internship blog posts published</div>
+                    </div>
+                    <div class="milestone">
+                        <div class="milestone-checkbox"></div>
+                        <div class="milestone-text">3 recommendation letters collected</div>
+                    </div>
+                    <div class="milestone">
+                        <div class="milestone-checkbox"></div>
+                        <div class="milestone-text">Portfolio site live with custom domain</div>
+                    </div>
+                    <div class="milestone">
+                        <div class="milestone-checkbox"></div>
+                        <div class="milestone-text">Graduate with M.Sc AI (Distinction/High Merit)</div>
+                    </div>
+                    <div class="milestone">
+                        <div class="milestone-checkbox"></div>
+                        <div class="milestone-text">Start full-time role Oct-Nov 2027</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="overview">
+            <h2>Ready to Execute?</h2>
+            <p>
+                This roadmap is ambitious but achievable. The key is consistent action over the next 12 months. Start with Phase 1
+                this week—join a meetup, begin the free certifications, and set up your GitHub. Small daily actions compound into
+                extraordinary results by September 2027.
+            </p>
+            <p style="margin-top: 1rem; color: var(--warning); font-weight: 600;">
+                💡 Pro Tip: Print this roadmap, review it monthly, and celebrate each milestone. You've got this! 🚀
+            </p>
+        </section>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        function switchPhase(event, phaseId) {
+            if (event) {
+                event.preventDefault();
+            }
+
+            // Hide all phases
+            const phases = document.querySelectorAll('.phase-section');
+            phases.forEach(phase => {
+                phase.classList.remove('active');
+            });
+
+            // Remove active class from all sidebar links
+            const links = document.querySelectorAll('.sidebar-link');
+            links.forEach(link => {
+                link.classList.remove('active');
+            });
+
+            // Show selected phase
+            const selectedPhase = document.getElementById(phaseId);
+            if (selectedPhase) {
+                selectedPhase.classList.add('active');
+            }
+
+            // Find and activate the correct sidebar link
+            const clickedLink = document.querySelector(`[onclick*="${phaseId}"]`);
+            if (clickedLink) {
+                clickedLink.classList.add('active');
+            }
+
+            // Scroll to top of content
+            setTimeout(() => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }, 50);
+        }
+
+        // Show intro by default on load
+        document.addEventListener('DOMContentLoaded', function() {
+            switchPhase(null, 'intro');
+        });
+    </script>
+</body>
+</html>
