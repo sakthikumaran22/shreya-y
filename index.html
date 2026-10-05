@@ -61,6 +61,26 @@
             height: 100vh;
             overflow-y: auto;
             box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
+            z-index: 1000;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 1rem;
+            cursor: pointer;
+            font-size: 1.5rem;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            text-align: left;
+            z-index: 1001;
+        }
+
+        .menu-toggle:hover {
+            background: var(--primary-dark);
         }
 
         .sidebar-header {
@@ -517,60 +537,207 @@
                 flex-direction: column;
             }
 
+            .menu-toggle {
+                display: block;
+            }
+
             .sidebar {
                 width: 100%;
                 height: auto;
-                position: relative;
+                position: absolute;
+                top: 60px;
+                left: 0;
                 border-right: none;
                 border-bottom: 2px solid var(--border);
                 overflow-y: visible;
                 max-height: none;
+                display: none;
+                flex-direction: column;
+                padding: 0;
+            }
+
+            .sidebar.active {
+                display: flex;
+            }
+
+            .sidebar-header {
+                padding: 1rem 1.5rem;
+                border-bottom: 2px solid var(--border);
+                margin: 0;
             }
 
             .sidebar-nav {
+                list-style: none;
+                padding: 0;
+                margin: 0;
                 display: flex;
-                flex-wrap: wrap;
-                gap: 0.5rem;
-                padding: 1rem;
+                flex-direction: column;
+                gap: 0;
             }
 
             .sidebar-nav li {
-                flex: 1;
-                min-width: 150px;
+                margin: 0;
+                border-bottom: 1px solid var(--border);
             }
 
             .sidebar-link {
-                padding: 0.75rem 1rem;
-                text-align: center;
-                border-bottom: 3px solid transparent;
-                border-left: none;
-                font-size: 0.9rem;
+                padding: 1rem 1.5rem;
+                text-align: left;
+                border-bottom: none;
+                border-left: 4px solid transparent;
+                font-size: 1rem;
             }
 
             .sidebar-link:hover,
             .sidebar-link.active {
-                border-bottom-color: var(--primary);
-                border-left: none;
+                background: rgba(99, 102, 241, 0.1);
+                border-left-color: var(--primary);
             }
 
-            .sidebar-header {
-                display: none;
+            header {
+                padding: 2rem 1rem;
             }
 
             header h1 {
-                font-size: 1.8rem;
+                font-size: 1.6rem;
+            }
+
+            header p {
+                font-size: 0.9rem;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+
+            .phase-header {
+                padding: 1.5rem 1rem;
+                margin-bottom: 1.5rem;
             }
 
             .phase-header h2 {
-                font-size: 1.5rem;
+                font-size: 1.4rem;
+            }
+
+            .phase-header p {
+                font-size: 0.95rem;
             }
 
             .section-card {
-                padding: 1.5rem;
+                padding: 1rem;
+                margin-bottom: 1rem;
+            }
+
+            .section-card h3 {
+                font-size: 1.2rem;
             }
 
             .cert-list {
                 grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .cert-badge {
+                padding: 1rem;
+            }
+
+            .advantages {
+                grid-template-columns: 1fr;
+            }
+
+            .advantage-card {
+                padding: 1rem;
+            }
+
+            .milestone-checklist {
+                padding: 1rem;
+            }
+
+            .milestone {
+                padding-bottom: 0.5rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .event-item {
+                padding: 0.75rem;
+                margin-bottom: 0.4rem;
+                font-size: 0.95rem;
+            }
+
+            ul, ol {
+                margin: 0.75rem 0 0.75rem 1.25rem;
+                padding-left: 0;
+            }
+
+            ul li, ol li {
+                margin-bottom: 0.4rem;
+                font-size: 0.95rem;
+            }
+
+            .highlight {
+                padding: 1rem;
+                margin: 0.75rem 0;
+            }
+
+            .phase-goal {
+                padding: 0.75rem;
+                margin-bottom: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.3rem;
+            }
+
+            header p {
+                font-size: 0.85rem;
+            }
+
+            .container {
+                padding: 0.75rem;
+            }
+
+            .section-card {
+                padding: 0.75rem;
+            }
+
+            .section-card h3 {
+                font-size: 1.1rem;
+            }
+
+            .subsection h4 {
+                font-size: 1rem;
+            }
+
+            .cert-name {
+                font-size: 0.95rem;
+            }
+
+            .cert-details {
+                font-size: 0.85rem;
+            }
+
+            .sidebar-link {
+                padding: 0.75rem 1rem;
+                font-size: 0.9rem;
+            }
+
+            .sidebar-link-number {
+                width: 20px;
+                height: 20px;
+                line-height: 20px;
+                font-size: 0.75rem;
+                margin-right: 0.5rem;
+            }
+
+            .link-badge a {
+                padding: 0.35rem 0.6rem;
+                font-size: 0.8rem;
+            }
+
+            .timeline-item {
+                padding-left: 1.5rem;
             }
         }
 
@@ -666,6 +833,9 @@
     </header>
 
     <div class="main-wrapper">
+        <!-- Mobile Menu Toggle -->
+        <button class="menu-toggle" aria-label="Toggle navigation menu">☰ Menu</button>
+
         <!-- Sidebar Navigation -->
         <aside class="sidebar">
             <div class="sidebar-header">
@@ -832,18 +1002,155 @@
             </div>
 
             <div class="section-card">
+                <h3>💻 Coding Problem Practice (Start Here!)</h3>
+                <div class="highlight">
+                    <strong>Goal:</strong> Build algorithmic thinking & coding fluency. Practice 3-5 problems/week.
+                </div>
+                <div class="cert-list">
+                    <div class="cert-badge">
+                        <div class="cert-name">LeetCode</div>
+                        <div class="cert-price">FREE / $35/month Premium</div>
+                        <div class="cert-details">
+                            <strong>Platform for:</strong> Data structures, algorithms, system design<br>
+                            <strong>Recommended:</strong> Start with Easy/Medium (50 problems minimum by end of Phase 1)<br>
+                            <strong>Best for:</strong> Interview prep, algorithmic thinking<br>
+                            <strong>Time commitment:</strong> 3-5 hrs/week
+                        </div>
+                        <div class="link-badge">
+                            <a href="https://leetcode.com" target="_blank">🔗 Start Solving</a>
+                        </div>
+                    </div>
+                    <div class="cert-badge">
+                        <div class="cert-name">HackerRank</div>
+                        <div class="cert-price">FREE / $35/month Premium</div>
+                        <div class="cert-details">
+                            <strong>Platform for:</strong> Python, problem-solving, algorithms<br>
+                            <strong>Recommended:</strong> Python track (30+ problems by end of Phase 1)<br>
+                            <strong>Best for:</strong> Structured learning paths, certificates<br>
+                            <strong>Time commitment:</strong> 2-3 hrs/week
+                        </div>
+                        <div class="link-badge">
+                            <a href="https://www.hackerrank.com" target="_blank">🔗 Start Coding</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="highlight" style="margin-top: 1rem; background: rgba(16, 185, 129, 0.1); border-left-color: var(--success);">
+                    💡 <strong>Pro Tip:</strong> Combine both platforms. LeetCode for interview prep, HackerRank for structured skill-building. Spend 1-2 hours daily on these.
+                </div>
+            </div>
+
+            <div class="section-card">
+                <h3>🚀 Full Stack Developer Foundations</h3>
+                <div class="highlight">
+                    <strong>Goal:</strong> Build practical web development skills. Complete at least 2 courses by end of Phase 1.
+                </div>
+                <div class="cert-list">
+                    <div class="cert-badge">
+                        <div class="cert-name">Python for Web Development</div>
+                        <div class="cert-price">FREE / $20-50</div>
+                        <div class="cert-details">
+                            <strong>Focus:</strong> FastAPI, Django, Flask basics<br>
+                            <strong>Recommended Course:</strong> <a href="https://www.freecodecamp.org/learn/back-end-development-and-apis/" target="_blank">FreeCodeCamp Back-End Development</a><br>
+                            <strong>Duration:</strong> 20 hrs (1-2 weeks)<br>
+                            <strong>Output:</strong> Build a simple REST API
+                        </div>
+                        <div class="link-badge">
+                            <a href="https://www.udemy.com/course/python-web-development/" target="_blank">🔗 Explore Courses</a>
+                        </div>
+                    </div>
+                    <div class="cert-badge">
+                        <div class="cert-name">React Fundamentals</div>
+                        <div class="cert-price">FREE / $15-50</div>
+                        <div class="cert-details">
+                            <strong>Focus:</strong> Components, hooks, state management<br>
+                            <strong>Recommended:</strong> <a href="https://react.dev" target="_blank">Official React Docs</a> + <a href="https://www.udemy.com/course/react-the-complete-guide/" target="_blank">Udemy React Course</a><br>
+                            <strong>Duration:</strong> 25 hrs (2-3 weeks)<br>
+                            <strong>Output:</strong> Build 2-3 interactive React components
+                        </div>
+                        <div class="link-badge">
+                            <a href="https://react.dev" target="_blank">🔗 Official Docs</a>
+                        </div>
+                    </div>
+                    <div class="cert-badge">
+                        <div class="cert-name">Next.js Essentials</div>
+                        <div class="cert-price">FREE</div>
+                        <div class="cert-details">
+                            <strong>Focus:</strong> Server-side rendering, API routes, deployment<br>
+                            <strong>Recommended:</strong> <a href="https://nextjs.org/learn" target="_blank">Official Next.js Learn</a><br>
+                            <strong>Duration:</strong> 15 hrs (2 weeks)<br>
+                            <strong>Output:</strong> Deploy a full-stack app on Vercel
+                        </div>
+                        <div class="link-badge">
+                            <a href="https://nextjs.org/learn" target="_blank">🔗 Learn Next.js</a>
+                        </div>
+                    </div>
+                    <div class="cert-badge">
+                        <div class="cert-name">Containerization with Docker</div>
+                        <div class="cert-price">FREE / $15</div>
+                        <div class="cert-details">
+                            <strong>Focus:</strong> Docker basics, containerizing apps, docker-compose<br>
+                            <strong>Recommended:</strong> <a href="https://www.docker.com/101-tutorial/" target="_blank">Docker's Official Tutorial</a> + <a href="https://www.udemy.com/course/docker-and-kubernetes-the-complete-guide/" target="_blank">Docker & Kubernetes Course</a><br>
+                            <strong>Duration:</strong> 10 hrs (1-2 weeks)<br>
+                            <strong>Output:</strong> Containerize a Python/Node.js app
+                        </div>
+                        <div class="link-badge">
+                            <a href="https://www.docker.com/101-tutorial/" target="_blank">🔗 Docker Tutorial</a>
+                        </div>
+                    </div>
+                    <div class="cert-badge">
+                        <div class="cert-name">Cloud Basics (AWS/GCP)</div>
+                        <div class="cert-price">FREE</div>
+                        <div class="cert-details">
+                            <strong>Focus:</strong> EC2, S3, Lambda, App deployment<br>
+                            <strong>Recommended:</strong> AWS Cloud Practitioner (already listed above)<br>
+                            <strong>Bonus:</strong> <a href="https://acloud.guru/course/aws-fundamentals" target="_blank">A Cloud Guru - AWS Fundamentals</a><br>
+                            <strong>Duration:</strong> 15 hrs (2-3 weeks)<br>
+                            <strong>Output:</strong> Deploy an app to AWS/GCP
+                        </div>
+                        <div class="link-badge">
+                            <a href="https://acloud.guru/course/aws-fundamentals" target="_blank">🔗 AWS Fundamentals</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="highlight" style="margin-top: 1rem; background: rgba(236, 72, 153, 0.1); border-left-color: var(--secondary);">
+                    💡 <strong>Strategy:</strong> Balance AI + Full Stack skills. This makes you a "T-shaped" developer—expert in AI, competent in web dev. Great for both AI Engineer and Full Stack roles.
+                </div>
+            </div>
+
+            <div class="section-card">
                 <h3>📂 Portfolio Foundations</h3>
                 <ul>
                     <li>Set up GitHub with professional username and clear README</li>
                     <li>Create 2-3 coursework projects (ML algorithms, data analysis)</li>
-                    <li>Write first blog post: "My M.Sc AI Journey" (500+ words on Medium/Hashnode)</li>
-                    <li>Star 10-15 relevant repos (transformers, TensorFlow, PyTorch)</li>
+                    <li>Create 1 simple full-stack project (e.g., To-Do app with React + Python backend)</li>
+                    <li>Write first blog post: "My M.Sc AI Journey + Full Stack Learning" (500+ words on Medium/Hashnode)</li>
+                    <li>Star 10-15 relevant repos (transformers, TensorFlow, PyTorch, Next.js, Docker)</li>
                 </ul>
             </div>
 
             <div class="section-card">
                 <h3>✅ Phase 1 Milestones</h3>
                 <div class="milestone-checklist">
+                    <div class="milestone">
+                        <div class="milestone-checkbox"></div>
+                        <div class="milestone-text">50+ LeetCode problems solved (Easy/Medium)</div>
+                    </div>
+                    <div class="milestone">
+                        <div class="milestone-checkbox"></div>
+                        <div class="milestone-text">30+ HackerRank Python problems solved</div>
+                    </div>
+                    <div class="milestone">
+                        <div class="milestone-checkbox"></div>
+                        <div class="milestone-text">2+ Full Stack courses completed (Python + React OR Next.js)</div>
+                    </div>
+                    <div class="milestone">
+                        <div class="milestone-checkbox"></div>
+                        <div class="milestone-text">1 full-stack project deployed (React + Python backend)</div>
+                    </div>
+                    <div class="milestone">
+                        <div class="milestone-checkbox"></div>
+                        <div class="milestone-text">Docker basics understood & app containerized</div>
+                    </div>
                     <div class="milestone">
                         <div class="milestone-checkbox"></div>
                         <div class="milestone-text">All 4 free certifications completed with badges saved</div>
@@ -862,7 +1169,7 @@
                     </div>
                     <div class="milestone">
                         <div class="milestone-checkbox"></div>
-                        <div class="milestone-text">GitHub repo with 2-3 DCU coursework projects</div>
+                        <div class="milestone-text">GitHub repo with 2-3 DCU coursework + 1 full-stack project</div>
                     </div>
                     <div class="milestone">
                         <div class="milestone-checkbox"></div>
@@ -894,6 +1201,20 @@
                     <li>Data Management and Visualization (Core)</li>
                     <li>Statistical Machine Translation (Elective) OR Mechanics of Search (Elective)</li>
                     <li>Capstone/Practicum preparation begins</li>
+                </ul>
+            </div>
+
+            <div class="section-card">
+                <h3>💻 Continue Coding Problem Practice (Ongoing)</h3>
+                <div class="highlight">
+                    <strong>Goal:</strong> Scale up to 100+ total LeetCode problems, focus on Medium difficulty & system design
+                </div>
+                <ul>
+                    <li><strong>LeetCode:</strong> Target 50-75 Medium difficulty problems by end of Phase 2 (total: 100+)</li>
+                    <li><strong>HackerRank:</strong> Complete Python & SQL tracks (60+ total problems)</li>
+                    <li><strong>System Design:</strong> Start exploring system design patterns on LeetCode Discuss</li>
+                    <li><strong>Time commitment:</strong> 4-6 hrs/week (continuous habit from Phase 1)</li>
+                    <li><strong>Group Study:</strong> Join a peer study group on Discord/Reddit (r/learnprogramming)</li>
                 </ul>
             </div>
 
@@ -1066,6 +1387,28 @@
 
             <div class="phase-goal">
                 <strong>🎯 Goal:</strong> Secure 2+ internship offers from top-tier companies. Most internships run Jan 15 - Aug 13, 2027 (6-9 months).
+            </div>
+
+            <div class="section-card">
+                <h3>💻 Interview Preparation - Coding & System Design</h3>
+                <div class="highlight">
+                    <strong>Goal:</strong> Master technical interviews. Reach 150+ LeetCode problems & focus on system design
+                </div>
+                <ul>
+                    <li><strong>LeetCode:</strong> Target 150+ total problems (focus: 30-50 Hard difficulty problems for top companies)</li>
+                    <li><strong>System Design:</strong> Study 3-5 complete system design patterns (design Netflix, Twitter, etc.)</li>
+                    <li><strong>HackerRank:</strong> Complete advanced tracks (SQL, Algorithms - 100+ problems)</li>
+                    <li><strong>Mock Interviews:</strong> Do 5-10 mock interviews (use Pramp, Interviewing.io, or peer study)</li>
+                    <li><strong>Interview Prep Resources:</strong>
+                        <ul>
+                            <li><a href="https://www.interviewbit.com/" target="_blank">InterviewBit</a> - Curated problems, patterns</li>
+                            <li><a href="https://www.grooklion.com/" target="_blank">Grokking the System Design Interview</a> - Master system design</li>
+                            <li><a href="https://www.pramp.com/" target="_blank">Pramp</a> - Free mock interviews with peers</li>
+                            <li><a href="https://www.interviewing.io/" target="_blank">Interviewing.io</a> - Mock interviews with real engineers</li>
+                        </ul>
+                    </li>
+                    <li><strong>Time commitment:</strong> 8-10 hrs/week (interview prep is critical now)</li>
+                </ul>
             </div>
 
             <div class="section-card">
@@ -1256,6 +1599,28 @@
             </div>
 
             <div class="section-card">
+                <h3>💻 Ongoing: Coding & Interview Prep (After Internship Ends)</h3>
+                <div class="highlight">
+                    <strong>Goal (Late Aug-Sep):</strong> Maintain your competitive edge while interviewing for full-time roles
+                </div>
+                <ul>
+                    <li><strong>Continue LeetCode:</strong> 5-10 problems/week to stay sharp during/after internship</li>
+                    <li><strong>System Design Deep Dives:</strong> Study 2-3 more complex system design patterns</li>
+                    <li><strong>Full Stack Integration:</strong> Build 1-2 end-to-end projects combining AI + Full Stack skills learned</li>
+                    <li><strong>Advanced Full Stack Topics:</strong>
+                        <ul>
+                            <li>Microservices architecture (Docker, Kubernetes basics)</li>
+                            <li>CI/CD pipelines (GitHub Actions, Jenkins)</li>
+                            <li>Advanced React patterns (Redux, Context API, Next.js advanced features)</li>
+                            <li>Database optimization & scaling (PostgreSQL, MongoDB)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Mock Interviews:</strong> Do 2-3 full-stack mock interviews (coding + system design)</li>
+                    <li><strong>Behavioral Prep:</strong> Prepare STAR stories from your internship experience</li>
+                </ul>
+            </div>
+
+            <div class="section-card">
                 <h3>⏰ Timeline</h3>
                 <div class="timeline">
                     <div class="timeline-item">
@@ -1440,11 +1805,47 @@
             setTimeout(() => {
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             }, 50);
+
+            // Close sidebar on mobile after selecting a phase
+            const sidebar = document.querySelector('.sidebar');
+            if (window.innerWidth <= 768 && sidebar) {
+                sidebar.classList.remove('active');
+            }
         }
 
-        // Show intro by default on load
+        // Mobile menu toggle functionality
         document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const sidebar = document.querySelector('.sidebar');
+
+            if (menuToggle) {
+                menuToggle.addEventListener('click', function() {
+                    sidebar.classList.toggle('active');
+                });
+            }
+
+            // Close sidebar when clicking outside on mobile
+            document.addEventListener('click', function(event) {
+                const isMobile = window.innerWidth <= 768;
+                if (isMobile && sidebar && sidebar.classList.contains('active')) {
+                    const isClickInsideSidebar = sidebar.contains(event.target);
+                    const isClickOnMenuToggle = menuToggle.contains(event.target);
+                    if (!isClickInsideSidebar && !isClickOnMenuToggle) {
+                        sidebar.classList.remove('active');
+                    }
+                }
+            });
+
+            // Show intro by default on load
             switchPhase(null, 'intro');
+        });
+
+        // Handle window resize - close sidebar on desktop
+        window.addEventListener('resize', function() {
+            const sidebar = document.querySelector('.sidebar');
+            if (window.innerWidth > 768 && sidebar) {
+                sidebar.classList.remove('active');
+            }
         });
     </script>
 </body>
